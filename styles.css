@@ -457,6 +457,146 @@ a {
   box-shadow: var(--shadow);
 }
 
+/* Service pages */
+.service-hero {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: linear-gradient(135deg, #fff 0%, #f3f4ff 45%, #fef6ff 100%);
+}
+
+.service-hero .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(77, 101, 255, 0.12);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.service-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 1rem 0;
+}
+
+.service-hero ul {
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.service-hero li {
+  margin-bottom: 0.4rem;
+}
+
+.service-hero img {
+  border-radius: 40px;
+  box-shadow: var(--shadow);
+}
+
+.service-content {
+  padding: 4rem 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  padding: 2rem;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.checklist li::before {
+  content: "✓";
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.service-steps {
+  padding: 4rem 0;
+  background: var(--bg-alt);
+}
+
+.steps-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.step-item {
+  padding: 2rem;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--primary);
+}
+
+.service-faq {
+  padding: 4rem 0;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.service-cta {
+  padding: 4rem 0 5rem;
+}
+
+.cta-card {
+  padding: 3rem;
+  border-radius: 32px;
+  background: #141414;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.cta-card .btn-primary {
+  background: #fff;
+  color: #141414;
+}
+
 /* Footer */
 .footer {
   padding: 4rem 0 2rem;
