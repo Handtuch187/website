@@ -18,44 +18,6 @@ if (navToggle && navLinks) {
   );
 }
 
-// Tabs
-const tabButtons = document.querySelectorAll(".tab-item");
-const panels = document.querySelectorAll(".panel");
-const tabArrowPrev = document.querySelector(".tab-arrow.prev");
-const tabArrowNext = document.querySelector(".tab-arrow.next");
-let currentTabIndex = Array.from(tabButtons).findIndex((btn) =>
-  btn.classList.contains("active")
-);
-if (currentTabIndex === -1) currentTabIndex = 0;
-
-const activateTab = (index) => {
-  if (!tabButtons.length) return;
-  const total = tabButtons.length;
-  currentTabIndex = (index + total) % total;
-  const target = tabButtons[currentTabIndex].dataset.tab;
-
-  tabButtons.forEach((btn, idx) => {
-    const isActive = idx === currentTabIndex;
-    btn.classList.toggle("active", isActive);
-    btn.setAttribute("aria-selected", isActive.toString());
-  });
-
-  panels.forEach((panel) => {
-    panel.classList.toggle("active", panel.dataset.tabPanel === target);
-  });
-};
-
-tabButtons.forEach((btn, idx) => {
-  btn.addEventListener("click", () => activateTab(idx));
-});
-
-tabArrowPrev?.addEventListener("click", () =>
-  activateTab(currentTabIndex - 1)
-);
-tabArrowNext?.addEventListener("click", () =>
-  activateTab(currentTabIndex + 1)
-);
-
 // Testimonials slider
 const slider = document.getElementById("testimonial-slider");
 if (slider) {
@@ -94,7 +56,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 
-document.querySelectorAll("section, .panel").forEach((element) => {
+document.querySelectorAll("section, .step-card").forEach((element) => {
   element.classList.add("reveal");
   observer.observe(element);
 });
