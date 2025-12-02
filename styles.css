@@ -59,6 +59,11 @@ a {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar.nav-hidden {
+  transform: translateY(-110%);
 }
 
 .nav-container {

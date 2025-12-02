@@ -18,6 +18,26 @@ if (navToggle && navLinks) {
   );
 }
 
+// Hide/show navbar on scroll
+const navbar = document.querySelector(".navbar");
+let lastScrollY = window.scrollY;
+
+const handleScroll = () => {
+  if (!navbar) return;
+  const current = window.scrollY;
+  const scrollingDown = current > lastScrollY;
+  const nearTop = current < 40;
+
+  if (scrollingDown && !nearTop) {
+    navbar.classList.add("nav-hidden");
+  } else {
+    navbar.classList.remove("nav-hidden");
+  }
+  lastScrollY = current;
+};
+
+window.addEventListener("scroll", handleScroll, { passive: true });
+
 // Testimonials slider
 const slider = document.getElementById("testimonial-slider");
 if (slider) {
