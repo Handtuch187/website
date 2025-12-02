@@ -11,7 +11,7 @@
   --green: #daf7d8;
   --border: #e5e5e5;
   --shadow: 0 30px 80px rgba(15, 15, 58, 0.09);
-  --nav-height: 88px;
+  --nav-height: 72px;
   font-family: "Inter", "Host Grotesk", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -75,11 +75,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 0.55rem 0;
 }
 
 .logo img {
-  height: 91px;
+  height: 78px;
 }
 
 .nav-links {
