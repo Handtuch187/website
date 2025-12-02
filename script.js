@@ -21,18 +21,21 @@ if (navToggle && navLinks) {
 // Hide/show navbar on scroll
 const navbar = document.querySelector(".navbar");
 let lastScrollY = window.scrollY;
+const scrollThreshold = 4;
 
 const handleScroll = () => {
   if (!navbar) return;
   const current = window.scrollY;
-  const scrollingDown = current > lastScrollY;
-  const nearTop = current < 40;
+  const delta = current - lastScrollY;
 
-  if (scrollingDown && !nearTop) {
+  if (current <= 0) {
+    navbar.classList.remove("nav-hidden");
+  } else if (delta > scrollThreshold) {
     navbar.classList.add("nav-hidden");
-  } else {
+  } else if (delta < -scrollThreshold) {
     navbar.classList.remove("nav-hidden");
   }
+
   lastScrollY = current;
 };
 
