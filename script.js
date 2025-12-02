@@ -78,7 +78,26 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 
-document.querySelectorAll("section, .step-card").forEach((element) => {
+document.querySelectorAll("section").forEach((element) => {
   element.classList.add("reveal");
   observer.observe(element);
 });
+
+// Step cards parallax
+const stepCards = document.querySelectorAll(".step-card");
+const updateStepParallax = () => {
+  stepCards.forEach((card) => {
+    const rect = card.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || 1;
+    const centerOffset =
+      (viewportHeight * 0.5 - (rect.top + rect.height / 2)) / viewportHeight;
+    const translate = Math.max(Math.min(centerOffset * 40, 18), -18);
+    card.style.setProperty("--card-shift", `${translate}px`);
+  });
+};
+
+if (stepCards.length) {
+  updateStepParallax();
+  window.addEventListener("scroll", updateStepParallax, { passive: true });
+  window.addEventListener("resize", updateStepParallax);
+}
