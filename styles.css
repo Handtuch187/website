@@ -203,18 +203,12 @@ a {
   padding: clamp(2.5rem, 6vw, 4rem) 0;
   overflow: hidden;
   background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 243, 255, 0.9) 60%, rgba(254, 247, 255, 0.88) 100%),
+    linear-gradient(120deg, rgba(10, 10, 14, 0.78) 0%, rgba(10, 10, 14, 0.35) 70%),
     url("https://cdn.prod.website-files.com/68d794d79e13ae21d06c8287/68d794d99e13ae21d06c84e6_Other%20home-min.webp");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(247, 245, 241, 0.75) 0%, rgba(247, 245, 241, 0) 65%);
+  color: #fff;
 }
 
 .hero .container {
@@ -233,12 +227,8 @@ a {
 }
 
 .hero-content {
-  max-width: min(700px, 100%);
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 32px;
-  padding: clamp(1.5rem, 4vw, 2.75rem);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
+  max-width: min(720px, 100%);
+  padding: 0;
 }
 
 .hero-content h1 {
@@ -248,12 +238,26 @@ a {
 
 .hero-content .lead {
   margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero-cta {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.hero .eyebrow {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.hero .btn-outline {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.hero .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .button-group {
@@ -267,13 +271,14 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .avatars {
   display: inline-flex;
   align-items: center;
   padding: 0.35rem 0.8rem;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.35);
   border-radius: 999px;
   box-shadow: var(--shadow);
   gap: 0.25rem;
@@ -295,6 +300,7 @@ a {
 .avatars span {
   font-weight: 600;
   margin-left: 0.25rem;
+  color: #fff;
 }
 
 /* Steps */
