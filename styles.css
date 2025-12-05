@@ -286,6 +286,14 @@ a {
   padding: 3rem 0;
 }
 
+.steps .container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: clamp(1rem, 5vw, 4rem);
+  padding-right: clamp(1rem, 5vw, 4rem);
+}
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
