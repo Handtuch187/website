@@ -60,7 +60,7 @@ a {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(248, 245, 237, 0.95);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -206,7 +206,7 @@ a {
     linear-gradient(120deg, rgba(10, 10, 14, 0.78) 0%, rgba(10, 10, 14, 0.35) 70%),
     url("https://cdn.prod.website-files.com/68d794d79e13ae21d06c8287/68d794d99e13ae21d06c84e6_Other%20home-min.webp");
   background-size: cover;
-  background-position: center right;
+  background-position: 50% 15%;
   background-repeat: no-repeat;
   color: #fff;
 }
