@@ -847,7 +847,7 @@ a {
   }
 
   .stat-card {
-    min-width: 220px;
+    min-width: 90%;
     scroll-snap-align: start;
   }
 }
