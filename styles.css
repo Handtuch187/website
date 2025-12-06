@@ -850,4 +850,24 @@ a {
     min-width: 90%;
     scroll-snap-align: start;
   }
+  .slider {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .slider-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+  }
+
+  .testimonial-card {
+    min-width: 80%;
+    scroll-snap-align: start;
+    margin-right: 0;
+  }
+
+  .slider-nav {
+    display: none;
+  }
 }
