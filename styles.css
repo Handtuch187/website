@@ -794,10 +794,6 @@ a {
 }
 
 @media (max-width: 600px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
   .button-group {
     flex-direction: column;
     width: 100%;
@@ -805,5 +801,19 @@ a {
 
   .button-group .btn {
     width: 100%;
+  }
+
+  .steps-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .step-card {
+    min-width: 78%;
+    scroll-snap-align: start;
   }
 }
