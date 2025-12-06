@@ -86,6 +86,11 @@ document.querySelectorAll("section").forEach((element) => {
 // Step cards parallax
 const stepCards = document.querySelectorAll(".step-card");
 const updateStepParallax = () => {
+  if (window.innerWidth <= 700) {
+    stepCards.forEach((card) => card.style.removeProperty("--card-shift"));
+    return;
+  }
+
   stepCards.forEach((card) => {
     const rect = card.getBoundingClientRect();
     const viewportHeight = window.innerHeight || 1;

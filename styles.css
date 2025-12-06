@@ -830,4 +830,18 @@ a {
     min-width: 78%;
     scroll-snap-align: start;
   }
+
+  .stats-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .stat-card {
+    min-width: 220px;
+    scroll-snap-align: start;
+  }
 }
