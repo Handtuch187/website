@@ -816,4 +816,18 @@ a {
     min-width: 78%;
     scroll-snap-align: start;
   }
+
+  .service-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-card {
+    min-width: 78%;
+    scroll-snap-align: start;
+  }
 }
