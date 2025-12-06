@@ -272,6 +272,7 @@ a {
   align-items: center;
   gap: 1rem;
   color: rgba(255, 255, 255, 0.88);
+  flex-wrap: wrap;
 }
 
 .avatars {
@@ -282,6 +283,7 @@ a {
   border-radius: 999px;
   box-shadow: var(--shadow);
   gap: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .avatars img {
@@ -436,6 +438,10 @@ a {
   background: #fff;
   text-align: center;
   box-shadow: var(--shadow);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-value {
