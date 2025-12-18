@@ -43,6 +43,16 @@ a {
   text-decoration: none;
 }
 
+.contact-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+.contact-link:hover {
+  color: var(--primary);
+}
+
 .container {
   width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
@@ -166,6 +176,22 @@ a {
 .btn-outline {
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: transparent;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background: #1fbf5a;
+}
+
+.btn .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .btn-secondary {
