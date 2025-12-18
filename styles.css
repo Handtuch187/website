@@ -580,6 +580,7 @@ a {
   text-transform: uppercase;
   font-size: 0.85rem;
   color: rgba(20, 20, 20, 0.7);
+  text-align: center;
 }
 
 .about-bubble h3 {
