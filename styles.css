@@ -60,6 +60,16 @@ a {
   color: var(--primary);
 }
 
+.link-blue {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-blue:hover {
+  color: var(--blue-dark);
+}
+
 .impressum-page .info-card {
   gap: 0.4rem;
 }

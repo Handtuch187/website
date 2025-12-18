@@ -40,30 +40,16 @@ const handleScroll = () => {
 
 window.addEventListener("scroll", handleScroll, { passive: true });
 
-// Testimonials slider
-const slider = document.getElementById("testimonial-slider");
-if (slider) {
-  const track = slider.querySelector(".slider-track");
-  const cards = Array.from(track.children);
-  const prevButton = slider.querySelector(".prev");
-  const nextButton = slider.querySelector(".next");
-  let index = 0;
-
-  const scrollToCard = () => {
-    const width = cards[0].getBoundingClientRect().width + 20;
-    track.scrollTo({ left: index * width, behavior: "smooth" });
-  };
-
-  prevButton.addEventListener("click", () => {
-    index = Math.max(index - 1, 0);
-    scrollToCard();
-  });
-
-  nextButton.addEventListener("click", () => {
-    index = Math.min(index + 1, cards.length - 1);
-    scrollToCard();
-  });
-}
+// Ensure header is visible on initial load
+window.addEventListener(
+  "load",
+  () => {
+    if (!navbar) return;
+    navbar.classList.remove("nav-hidden");
+    lastScrollY = window.scrollY;
+  },
+  { once: true }
+);
 
 // Scroll animations
 const observer = new IntersectionObserver(
