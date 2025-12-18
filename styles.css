@@ -595,12 +595,21 @@ a {
 }
 
 .form-grid input,
+.form-grid select,
 .form-grid textarea {
   padding: 0.85rem 1rem;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   font: inherit;
   background: #fff;
+}
+
+.form-grid select:invalid {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form-grid select option {
+  color: var(--text);
 }
 
 .form-grid input::placeholder {
@@ -1044,17 +1053,14 @@ a {
   }
 
   .service-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
   }
 
   .service-card {
-    min-width: 78%;
-    scroll-snap-align: start;
+    min-width: auto;
+    scroll-snap-align: unset;
   }
 
   .stats-grid {
