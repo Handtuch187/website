@@ -459,42 +459,31 @@ a {
   background: #fff;
 }
 
-.about-panel {
+.about-grid {
   margin-top: 1.75rem;
-  padding: clamp(1.25rem, 2.5vw, 2.25rem);
-  background: #fff;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
 }
 
-.about-panel .expertise-image {
-  display: block;
-}
-
-.about-panel .expertise-image img {
-  width: 100%;
-}
-
-.consulting .stat-card {
-  background: var(--bg);
-}
-
-.about-panel-content {
+.about-copy {
   max-width: 980px;
 }
 
-.about-panel p {
+.about-grid p {
   margin: 0 0 0.9rem;
   color: var(--text-muted);
   line-height: 1.75;
 }
 
-.about-panel p:last-child {
+.about-grid p:last-child {
   margin-bottom: 0;
 }
 
-.about-panel strong {
+.about-grid strong {
   color: var(--text);
+}
+
+.about-stats {
+  padding: 2.5rem 0 4rem;
+  background: var(--bg);
 }
 
 .section-header {
