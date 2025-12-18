@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="kontakt-page">
   <div class="page-wrapper">
     <header class="navbar" data-scroll-lock>
       <div class="container nav-container">
@@ -23,6 +23,7 @@
           <a href="index.html#hero">Home</a>
           <a href="index.html#mpu-beratung">MPU-Beratung</a>
           <a href="index.html#services">Angebot</a>
+          <a class="nav-contact" href="kontakt.html">Kontakt</a>
         </nav>
         <div class="nav-actions">
           <a class="btn btn-primary btn-sm" href="kontakt.html">Kontakt</a>
@@ -46,8 +47,8 @@
               <span>Kontakt</span>
             </nav>
             <span class="tag">Erreichbarkeit</span>
-            <h1>Wir sind jederzeit Erreichbar</h1>
-            <div class="button-group">
+            <h1>Wir sind jederzeit erreichbar</h1>
+            <div class="button-group button-group-vertical">
               <a class="btn btn-primary" href="tel:+491782873123">
                 <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.77.54 2.61a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.46-1.05a2 2 0 0 1 2.11-.45c.84.24 1.71.42 2.61.54A2 2 0 0 1 22 16.92z"/>
@@ -69,7 +70,7 @@
               </a>
             </div>
           </div>
-          <div>
+          <div class="contact-hero-image">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80&ixlib=rb-4.0.3" alt="Beratungsraum" />
           </div>
         </div>
@@ -85,40 +86,40 @@
             <form class="contact-form" id="contact-form" novalidate>
               <div class="form-grid">
                 <label>
-                  <span>Name</span>
+                  <span>Name:</span>
                   <input name="name" autocomplete="family-name" required />
                 </label>
                 <label>
-                  <span>Vorname</span>
+                  <span>Vorname:</span>
                   <input name="vorname" autocomplete="given-name" required />
                 </label>
                 <label>
-                  <span>Geburtsdatum</span>
+                  <span>Geburtsdatum:</span>
                   <input type="date" name="geburtsdatum" autocomplete="bday" required />
                 </label>
                 <label>
-                  <span>Wohnort</span>
+                  <span>Wohnort:</span>
                   <input name="wohnort" autocomplete="address-level2" required />
                 </label>
                 <label>
-                  <span>Telefonnummer</span>
+                  <span>Telefonnummer:</span>
                   <input type="tel" name="telefon" autocomplete="tel" required />
                 </label>
                 <label>
-                  <span>Email</span>
+                  <span>Email:</span>
                   <input type="email" name="email" autocomplete="email" required />
                 </label>
                 <label class="span-2">
-                  <span>Betreff</span>
+                  <span>Betreff:</span>
                   <select name="betreff" required>
                     <option value="" selected disabled>- bitte auswählen -</option>
-                    <option value="Alkohol">Alkohol</option>
-                    <option value="Drogen">Drogen</option>
-                    <option value="Punkte">Punkte</option>
+                    <option value="MPU/Alkohol">MPU/Alkohol</option>
+                    <option value="MPU/Drogen">MPU/Drogen</option>
+                    <option value="MPU/Punkte">MPU/Punkte</option>
                   </select>
                 </label>
                 <label class="span-2">
-                  <span>Ihre Nachricht</span>
+                  <span>Ihre Nachricht:</span>
                   <textarea name="nachricht" rows="6" required></textarea>
                 </label>
               </div>

@@ -123,6 +123,10 @@ a {
   justify-content: center;
 }
 
+.nav-links .nav-contact {
+  display: none;
+}
+
 .nav-links a {
   position: relative;
   padding-bottom: 0.2rem;
@@ -452,7 +456,7 @@ a {
   margin: 0 0 0.35rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--primary);
   font-weight: 700;
 }
@@ -1115,6 +1119,14 @@ a {
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
+  .nav-links .nav-contact {
+    display: block;
+  }
+
+  .nav-actions > .btn.btn-primary.btn-sm {
+    display: none;
+  }
+
   .nav-links.open {
     opacity: 1;
     transform: translateY(0);
@@ -1123,6 +1135,26 @@ a {
 
   .nav-toggle {
     display: inline-flex;
+  }
+}
+
+.button-group-vertical {
+  flex-direction: column;
+  align-items: stretch;
+  width: min(420px, 100%);
+}
+
+.button-group-vertical .btn {
+  width: 100%;
+}
+
+.kontakt-page .contact-hero-image {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .kontakt-page .contact-hero-image {
+    display: none;
   }
 }
 
