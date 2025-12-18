@@ -456,6 +456,7 @@ a {
 /* Consulting */
 .consulting {
   padding: 5rem 0;
+  background: #fff;
 }
 
 .about-panel {
@@ -464,6 +465,18 @@ a {
   background: #fff;
   border-radius: 28px;
   box-shadow: var(--shadow);
+}
+
+.about-panel .expertise-image {
+  display: block;
+}
+
+.about-panel .expertise-image img {
+  width: 100%;
+}
+
+.consulting .stat-card {
+  background: var(--bg);
 }
 
 .about-panel-content {
