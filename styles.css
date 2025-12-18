@@ -53,6 +53,22 @@ a {
   color: var(--primary);
 }
 
+.impressum-page .info-card {
+  gap: 0.4rem;
+}
+
+.impressum-page .info-card h3 {
+  margin: 0.9rem 0 0.15rem;
+}
+
+.impressum-page .info-card h3:first-child {
+  margin-top: 0;
+}
+
+.impressum-page .info-card p {
+  margin: 0;
+}
+
 .container {
   width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
