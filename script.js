@@ -106,3 +106,31 @@ if (stepCards.length) {
   window.addEventListener("scroll", updateStepParallax, { passive: true });
   window.addEventListener("resize", updateStepParallax);
 }
+
+// Contact form -> mailto
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    const subject = (data.get("betreff") || "").toString().trim();
+    const lines = [
+      `Name: ${(data.get("name") || "").toString().trim()}`,
+      `Vorname: ${(data.get("vorname") || "").toString().trim()}`,
+      `Geburtsdatum: ${(data.get("geburtsdatum") || "").toString().trim()}`,
+      `Wohnort: ${(data.get("wohnort") || "").toString().trim()}`,
+      `Telefonnummer: ${(data.get("telefon") || "").toString().trim()}`,
+      `Email: ${(data.get("email") || "").toString().trim()}`,
+      "",
+      "Nachricht:",
+      (data.get("nachricht") || "").toString().trim(),
+    ];
+
+    const mailto = `mailto:info@mpufreifahrt.de?subject=${encodeURIComponent(
+      subject || "Kontaktanfrage"
+    )}&body=${encodeURIComponent(lines.join("\n"))}`;
+    window.location.href = mailto;
+  });
+}
