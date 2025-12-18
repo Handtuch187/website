@@ -1032,17 +1032,9 @@ a {
   }
 
   .steps-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .step-card {
-    min-width: 78%;
-    scroll-snap-align: start;
   }
 
   .service-grid {
