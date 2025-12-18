@@ -117,10 +117,14 @@ a {
 }
 
 .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 1.5rem;
   font-weight: 500;
   justify-content: center;
+  width: max-content;
 }
 
 .nav-links .nav-contact {
@@ -1131,6 +1135,8 @@ a {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
+    left: auto;
+    width: auto;
   }
 
   .nav-links .nav-contact {
