@@ -112,6 +112,11 @@ a {
   position: relative;
 }
 
+.nav-container > a.logo {
+  grid-column: 1;
+  justify-self: start;
+}
+
 .logo img {
   height: 78px;
 }
@@ -157,6 +162,8 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  grid-column: 3;
+  justify-self: end;
 }
 
 .nav-toggle {
