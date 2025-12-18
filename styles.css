@@ -488,6 +488,26 @@ a {
   max-width: 980px;
 }
 
+.about-bubble {
+  background: #daf7d8;
+  border-radius: 28px;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  box-shadow: var(--shadow);
+}
+
+.about-kicker {
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: rgba(20, 20, 20, 0.7);
+}
+
+.about-bubble h3 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+
 .about-grid p {
   margin: 0 0 0.9rem;
   color: var(--text-muted);
