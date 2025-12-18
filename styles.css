@@ -182,8 +182,8 @@ a {
   background: #25d366;
   color: #fff;
   border: none;
-  padding-left: 1.65rem;
-  padding-right: 1.65rem;
+  padding-left: 1.9rem;
+  padding-right: 1.75rem;
   white-space: nowrap;
 }
 
@@ -191,14 +191,14 @@ a {
   background: #1fbf5a;
 }
 
+.btn-whatsapp .icon {
+  margin-left: 2px;
+}
+
 .btn .icon {
   width: 18px;
   height: 18px;
   fill: currentColor;
-}
-
-.hero-subcopy {
-  color: #fff;
 }
 
 .btn-secondary {
@@ -282,6 +282,10 @@ a {
 
 .hero .eyebrow {
   color: rgba(255, 255, 255, 0.65);
+}
+
+.hero .hero-subcopy {
+  color: rgba(255, 255, 255, 0.96);
 }
 
 .hero .btn-outline {
@@ -452,6 +456,23 @@ a {
 /* Consulting */
 .consulting {
   padding: 5rem 0;
+}
+
+.consulting .about-grid {
+  margin-top: 3rem;
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+  border-radius: 40px;
+  background: var(--bg-alt);
+  box-shadow: var(--shadow);
+}
+
+.consulting .about-grid p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.consulting .about-grid strong {
+  color: var(--text);
 }
 
 .section-header {
