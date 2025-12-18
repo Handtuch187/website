@@ -615,6 +615,12 @@ a {
   gap: 1.5rem;
 }
 
+.services-cta {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
 .service-card {
   padding: 2rem;
   background: #fff;
