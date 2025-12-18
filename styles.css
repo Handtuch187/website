@@ -1183,9 +1183,10 @@ a {
 
 .contact-cta-item::before {
   content: "→";
-  font-weight: 800;
+  font-weight: 900;
   opacity: 0.95;
   color: var(--text);
+  font-size: 1.15rem;
 }
 
 .contact-cta-item .btn {
@@ -1204,6 +1205,12 @@ a {
 .contact-cta-item .btn:focus-visible {
   outline: 3px solid rgba(46, 125, 50, 0.35);
   outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .contact-cta-item::before {
+    content: none;
+  }
 }
 
 .kontakt-page .contact-hero-image {
