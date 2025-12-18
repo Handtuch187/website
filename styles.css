@@ -458,30 +458,29 @@ a {
   padding: 5rem 0;
 }
 
-.about-strip {
+.about-panel {
   margin-top: 1.75rem;
-  padding: clamp(1.25rem, 2.5vw, 2rem);
-  background: linear-gradient(90deg, rgba(77, 101, 255, 0.12), rgba(255, 255, 255, 0));
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  border-left: 6px solid var(--primary);
+  padding: clamp(1.25rem, 2.5vw, 2.25rem);
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
 }
 
-.about-strip-content {
+.about-panel-content {
   max-width: 980px;
 }
 
-.about-strip p {
+.about-panel p {
   margin: 0 0 0.9rem;
   color: var(--text-muted);
   line-height: 1.75;
 }
 
-.about-strip p:last-child {
+.about-panel p:last-child {
   margin-bottom: 0;
 }
 
-.about-strip strong {
+.about-panel strong {
   color: var(--text);
 }
 
