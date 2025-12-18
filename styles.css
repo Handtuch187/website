@@ -182,6 +182,9 @@ a {
   background: #25d366;
   color: #fff;
   border: none;
+  padding-left: 1.65rem;
+  padding-right: 1.65rem;
+  white-space: nowrap;
 }
 
 .btn-whatsapp:hover {
@@ -192,6 +195,10 @@ a {
   width: 18px;
   height: 18px;
   fill: currentColor;
+}
+
+.hero-subcopy {
+  color: #fff;
 }
 
 .btn-secondary {
