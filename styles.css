@@ -479,21 +479,52 @@ a {
 .step-wrap {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .step-badge {
   width: 100%;
   text-align: center;
-  padding: 0.7rem 0.9rem;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.8);
+  padding: 0.95rem 0.9rem;
+  border-radius: 16px;
+  background: var(--bg);
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 18px 40px rgba(15, 15, 58, 0.12);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 700;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: floatBadge 10s ease-in-out infinite;
+}
+
+.step-wrap:nth-child(2) .step-badge {
+  animation-delay: -2.5s;
+}
+
+.step-wrap:nth-child(3) .step-badge {
+  animation-delay: -5s;
+}
+
+.step-wrap:nth-child(4) .step-badge {
+  animation-delay: -7.5s;
+}
+
+.step-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 65px rgba(15, 15, 58, 0.16);
+}
+
+@keyframes floatBadge {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .panel-media {
