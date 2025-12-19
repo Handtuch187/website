@@ -431,10 +431,21 @@ a {
   margin-top: 1.75rem;
 }
 
-.step-card {
+.step-wrap {
   --card-shift: 0px;
   --hover-shift: 0px;
   --hover-scale: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-wrap:hover {
+  --hover-shift: -6px;
+  --hover-scale: 1.01;
+}
+
+.step-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -460,13 +471,11 @@ a {
   pointer-events: none;
 }
 
-.step-card:hover {
-  --hover-shift: -6px;
-  --hover-scale: 1.01;
+.step-wrap:hover .step-card {
   box-shadow: 0 30px 70px rgba(15, 15, 58, 0.18);
 }
 
-.step-card:hover::before {
+.step-wrap:hover .step-card::before {
   opacity: 1;
   transform: translateY(0);
 }
@@ -474,12 +483,6 @@ a {
 .step-card h2 {
   margin: 0 0 0.5rem;
   font-size: 1.4rem;
-}
-
-.step-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .step-badge {
@@ -495,36 +498,7 @@ a {
   font-size: 0.9rem;
   font-weight: 700;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  animation: floatBadge 10s ease-in-out infinite;
-}
-
-.step-wrap:nth-child(2) .step-badge {
-  animation-delay: -2.5s;
-}
-
-.step-wrap:nth-child(3) .step-badge {
-  animation-delay: -5s;
-}
-
-.step-wrap:nth-child(4) .step-badge {
-  animation-delay: -7.5s;
-}
-
-.step-badge:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 65px rgba(15, 15, 58, 0.16);
-}
-
-@keyframes floatBadge {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  transform: translateY(calc(var(--card-shift) + var(--hover-shift))) scale(var(--hover-scale));
 }
 
 .panel-media {

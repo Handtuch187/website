@@ -70,10 +70,27 @@ document.querySelectorAll("section").forEach((element) => {
 });
 
 // Step cards parallax
+const stepWraps = document.querySelectorAll(".step-wrap");
 const stepCards = document.querySelectorAll(".step-card");
 const updateStepParallax = () => {
   if (window.innerWidth <= 700) {
+    if (stepWraps.length) {
+      stepWraps.forEach((wrap) => wrap.style.removeProperty("--card-shift"));
+    }
     stepCards.forEach((card) => card.style.removeProperty("--card-shift"));
+    return;
+  }
+
+  if (stepWraps.length) {
+    stepWraps.forEach((wrap) => {
+      const card = wrap.querySelector(".step-card") || wrap;
+      const rect = card.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 1;
+      const centerOffset =
+        (viewportHeight * 0.5 - (rect.top + rect.height / 2)) / viewportHeight;
+      const translate = Math.max(Math.min(centerOffset * 40, 18), -18);
+      wrap.style.setProperty("--card-shift", `${translate}px`);
+    });
     return;
   }
 
@@ -87,7 +104,7 @@ const updateStepParallax = () => {
   });
 };
 
-if (stepCards.length) {
+if (stepWraps.length || stepCards.length) {
   updateStepParallax();
   window.addEventListener("scroll", updateStepParallax, { passive: true });
   window.addEventListener("resize", updateStepParallax);
