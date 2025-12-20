@@ -115,8 +115,7 @@ const updateStepParallax = () => {
       const viewportHeight = window.innerHeight || 1;
       const centerOffset =
         (viewportHeight * 0.5 - (rect.top + rect.height / 2)) / viewportHeight;
-      // Only lift cards upward (never push down into next section)
-      const translate = Math.max(Math.min(centerOffset * 40, 0), -18);
+      const translate = Math.max(Math.min(centerOffset * 40, 18), -18);
       wrap.style.setProperty("--card-shift", `${translate}px`);
     });
     return;
@@ -127,7 +126,7 @@ const updateStepParallax = () => {
     const viewportHeight = window.innerHeight || 1;
     const centerOffset =
       (viewportHeight * 0.5 - (rect.top + rect.height / 2)) / viewportHeight;
-    const translate = Math.max(Math.min(centerOffset * 40, 0), -18);
+    const translate = Math.max(Math.min(centerOffset * 40, 18), -18);
     card.style.setProperty("--card-shift", `${translate}px`);
   });
 };

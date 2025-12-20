@@ -373,6 +373,11 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.loc-arrow {
+  margin-right: 0.55rem;
+  opacity: 0.95;
+}
+
 .hero-content .text-lg {
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
@@ -451,6 +456,13 @@ a {
 .steps {
   background: var(--bg-alt);
   padding: 3rem 0;
+}
+
+/* Desktop: give steps more room so nothing can overlap */
+@media (min-width: 901px) {
+  .steps {
+    padding-bottom: 7rem;
+  }
 }
 
 .steps .container {
@@ -1328,16 +1340,20 @@ a {
     gap: 3.25rem;
   }
 
+  .step-wrap + .step-wrap {
+    margin-top: 1.25rem;
+  }
+
   .step-wrap {
     gap: 2rem;
   }
 
   .steps {
-    padding-bottom: 12rem;
+    padding-bottom: 6rem;
   }
 
   .consulting {
-    padding-top: 9rem;
+    padding-top: 5rem;
   }
 
   .service-grid {
