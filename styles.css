@@ -354,6 +354,26 @@ a {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.hero-locations {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 0.75rem;
+}
+
+.hero-locations span {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-content .text-lg {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
 .hero-cta {
   display: flex;
   flex-direction: column;
@@ -1277,7 +1297,25 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  .step-wrap {
+    transform: none;
+  }
+
+  .step-badge,
+  .step-card {
+    transform: none;
+  }
+
+  .step-wrap:hover {
+    --hover-shift: 0px;
+    --hover-scale: 1;
+  }
+
+  .steps {
+    padding-bottom: 4rem;
   }
 
   .service-grid {
