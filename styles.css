@@ -1324,16 +1324,17 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.25rem;
   }
 
   .step-wrap {
     gap: 1rem; /* keep badge->card spacing tight like desktop */
-    margin-bottom: 3rem; /* increase spacing BETWEEN bubbles */
+    margin-bottom: 0;
   }
 
-  .step-wrap:last-child {
-    margin-bottom: 0;
+  /* Increase spacing between previous bubble and next badge */
+  .step-wrap + .step-wrap {
+    margin-top: 2.5rem;
   }
 
   .steps {
