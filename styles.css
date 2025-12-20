@@ -362,6 +362,15 @@ a {
   margin: 0 0 0.75rem;
 }
 
+.hero .hero-locations {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.loc-dot {
+  margin-right: 0.45rem;
+  opacity: 0.9;
+}
+
 .hero-locations span {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
@@ -1266,6 +1275,35 @@ a {
 .contact-cta-item .btn:focus-visible {
   outline: 3px solid rgba(46, 125, 50, 0.35);
   outline-offset: 3px;
+}
+
+.step-wrap:hover {
+  /* Avoid sticky hover on touch devices */
+  --hover-shift: 0px;
+  --hover-scale: 1;
+}
+
+.step-badge,
+.step-card {
+  /* Ensure transforms never cause overlap on smaller screens */
+  transform: none;
+}
+
+.step-wrap:hover .step-card::before {
+  opacity: 0;
+  transform: translateY(20%);
+}
+
+.step-wrap:hover .step-card {
+  box-shadow: var(--shadow);
+}
+
+.steps {
+  padding-bottom: 6rem;
+}
+
+.consulting {
+  padding-top: 6rem;
 }
 
 @media (max-width: 600px) {

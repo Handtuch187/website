@@ -99,7 +99,8 @@ if ("IntersectionObserver" in window) {
 const stepWraps = document.querySelectorAll(".step-wrap");
 const stepCards = document.querySelectorAll(".step-card");
 const updateStepParallax = () => {
-  if (window.innerWidth <= 700) {
+  // Disable parallax on mobile/tablet to avoid visual overlap
+  if (window.innerWidth <= 900) {
     if (stepWraps.length) {
       stepWraps.forEach((wrap) => wrap.style.removeProperty("--card-shift"));
     }
