@@ -58,6 +58,11 @@ a {
   color: var(--text);
 }
 
+/* Footer exception: brand must be readable on dark bg */
+.footer .brand-mark .brand-black {
+  color: var(--primary);
+}
+
 .contact-link {
   text-decoration: underline;
   text-decoration-thickness: 2px;
