@@ -1332,13 +1332,9 @@ a {
     margin-bottom: 0;
   }
 
-  /* Ensure clear spacing AFTER each step bubble (prevents badge sticking) */
-  .step-card {
-    margin-bottom: 2.25rem;
-  }
-
-  .step-wrap:last-child .step-card {
-    margin-bottom: 0;
+  /* Ensure clear spacing BEFORE each next badge (prevents sticking) */
+  .step-wrap + .step-wrap {
+    padding-top: 2.25rem;
   }
 
   .steps {
