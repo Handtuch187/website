@@ -1329,23 +1329,24 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 1.5rem;
   }
 
-  .step-wrap + .step-wrap .step-badge {
-    margin-top: 0.75rem;
+  /* Only increase spacing ABOVE the next step (between blocks) */
+  .step-wrap + .step-wrap {
+    margin-top: 2rem;
   }
 
   .step-wrap {
-    gap: 2.25rem;
+    gap: 1rem; /* keep badge->card spacing tight like desktop */
   }
 
   .steps {
-    padding-bottom: 7rem;
+    padding-bottom: 9rem;
   }
 
   .consulting {
-    padding-top: 6rem;
+    padding-top: 7rem;
   }
 
   .service-grid {
