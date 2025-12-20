@@ -373,11 +373,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.loc-arrow {
-  margin-right: 0.55rem;
-  opacity: 0.95;
-}
-
 .hero-content .text-lg {
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
@@ -1329,19 +1324,15 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 0;
   }
 
   .step-wrap {
     gap: 1rem; /* keep badge->card spacing tight like desktop */
+    margin-bottom: 3rem; /* increase spacing BETWEEN bubbles */
   }
 
-  /* Increase spacing BETWEEN the bubbles (cards) */
-  .step-card {
-    margin-bottom: 2rem;
-  }
-
-  .step-wrap:last-child .step-card {
+  .step-wrap:last-child {
     margin-bottom: 0;
   }
 
