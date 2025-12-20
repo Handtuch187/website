@@ -1401,6 +1401,23 @@ a {
     text-align: center;
   }
 
+  /* Home page: center all bubble content + contact block on mobile */
+  .home-page .steps .panel-content {
+    text-align: center;
+  }
+
+  .home-page .services .service-card {
+    text-align: center;
+  }
+
+  .home-page .contact .contact-grid > div:first-child {
+    text-align: center;
+  }
+
+  .home-page .contact .button-group {
+    justify-content: center;
+  }
+
   .scroll-hint {
     display: block;
   }
