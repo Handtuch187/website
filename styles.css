@@ -403,6 +403,35 @@ a {
   color: #fff;
 }
 
+/* Desktop: more breathing room in hero + keep headline in one line */
+@media (min-width: 901px) {
+  .hero-content {
+    max-width: 980px;
+  }
+
+  .hero-content h1 {
+    white-space: nowrap;
+  }
+
+  .hero-locations {
+    margin-bottom: 1.1rem;
+    gap: 1.5rem;
+  }
+
+  .hero-content .text-lg {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .hero-cta {
+    gap: 1.85rem;
+  }
+
+  .button-group {
+    gap: 1.25rem;
+  }
+}
+
 .hero .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
 }
