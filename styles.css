@@ -1229,6 +1229,13 @@ a {
   .nav-toggle {
     display: inline-flex;
   }
+
+  /* Mobile stability: don't use transform-based reveal (prevents overlap) */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .button-group-vertical {
@@ -1277,33 +1284,21 @@ a {
   outline-offset: 3px;
 }
 
-.step-wrap:hover {
-  /* Avoid sticky hover on touch devices */
-  --hover-shift: 0px;
-  --hover-scale: 1;
-}
+/* Touch devices: avoid sticky hover while keeping desktop animations */
+@media (hover: none) {
+  .step-wrap:hover {
+    --hover-shift: 0px;
+    --hover-scale: 1;
+  }
 
-.step-badge,
-.step-card {
-  /* Ensure transforms never cause overlap on smaller screens */
-  transform: none;
-}
+  .step-wrap:hover .step-card::before {
+    opacity: 0;
+    transform: translateY(20%);
+  }
 
-.step-wrap:hover .step-card::before {
-  opacity: 0;
-  transform: translateY(20%);
-}
-
-.step-wrap:hover .step-card {
-  box-shadow: var(--shadow);
-}
-
-.steps {
-  padding-bottom: 6rem;
-}
-
-.consulting {
-  padding-top: 6rem;
+  .step-wrap:hover .step-card {
+    box-shadow: var(--shadow);
+  }
 }
 
 @media (max-width: 600px) {
@@ -1335,25 +1330,19 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2.25rem;
   }
 
   .step-wrap {
-    transform: none;
-  }
-
-  .step-badge,
-  .step-card {
-    transform: none;
-  }
-
-  .step-wrap:hover {
-    --hover-shift: 0px;
-    --hover-scale: 1;
+    gap: 1.25rem;
   }
 
   .steps {
-    padding-bottom: 4rem;
+    padding-bottom: 9rem;
+  }
+
+  .consulting {
+    padding-top: 7rem;
   }
 
   .service-grid {
