@@ -366,11 +366,6 @@ a {
   color: rgba(255, 255, 255, 0.96);
 }
 
-.loc-dot {
-  margin-right: 0.45rem;
-  opacity: 0.9;
-}
-
 .hero-locations span {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
@@ -1330,19 +1325,19 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 3.25rem;
   }
 
   .step-wrap {
-    gap: 1.25rem;
+    gap: 2rem;
   }
 
   .steps {
-    padding-bottom: 9rem;
+    padding-bottom: 12rem;
   }
 
   .consulting {
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
 
   .service-grid {
