@@ -45,9 +45,17 @@ a {
   text-decoration: none;
 }
 
-.brand {
-  color: var(--primary);
+.brand-mark {
   font-weight: 800;
+  white-space: nowrap;
+}
+
+.brand-mark .brand-green {
+  color: var(--primary);
+}
+
+.brand-mark .brand-black {
+  color: var(--text);
 }
 
 .contact-link {
