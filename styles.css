@@ -951,6 +951,10 @@ a {
 .service-hero h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin: 1rem 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .service-hero ul {

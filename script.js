@@ -52,22 +52,48 @@ window.addEventListener(
 );
 
 // Scroll animations
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+const sections = Array.from(document.querySelectorAll("section"));
 
-document.querySelectorAll("section").forEach((element) => {
-  element.classList.add("reveal");
-  observer.observe(element);
-});
+const markVisibleSections = () => {
+  const vh = window.innerHeight || 1;
+  sections.forEach((el) => {
+    if (el.classList.contains("in-view")) return;
+    const r = el.getBoundingClientRect();
+    const visible = r.bottom > 0 && r.top < vh * 0.95;
+    if (visible) el.classList.add("in-view");
+  });
+};
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
+  );
+
+  sections.forEach((element) => {
+    element.classList.add("reveal");
+    observer.observe(element);
+  });
+
+  // Safari-safe: immediately reveal anything already in view
+  markVisibleSections();
+  window.addEventListener("load", markVisibleSections, { once: true });
+  window.addEventListener("resize", markVisibleSections);
+
+  // Final fallback: never keep sections hidden
+  window.setTimeout(() => {
+    sections.forEach((el) => el.classList.add("in-view"));
+  }, 1200);
+} else {
+  sections.forEach((element) => element.classList.add("in-view"));
+}
 
 // Step cards parallax
 const stepWraps = document.querySelectorAll(".step-wrap");
