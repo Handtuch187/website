@@ -418,7 +418,12 @@ a {
     gap: 1.5rem;
   }
 
-  .hero-content .text-lg {
+  /* More space between locations and first subcopy line */
+  .hero-locations + .hero-subcopy {
+    margin-top: 1.2rem;
+  }
+
+  .hero .hero-subcopy {
     margin-top: 0.7rem;
     margin-bottom: 0.7rem;
   }
