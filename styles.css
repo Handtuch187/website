@@ -1332,21 +1332,25 @@ a {
     gap: 1.5rem;
   }
 
-  /* Only increase spacing ABOVE the next step (between blocks) */
-  .step-wrap + .step-wrap {
-    margin-top: 2rem;
-  }
-
   .step-wrap {
     gap: 1rem; /* keep badge->card spacing tight like desktop */
   }
 
+  /* Increase spacing BETWEEN the bubbles (cards) */
+  .step-card {
+    margin-bottom: 2rem;
+  }
+
+  .step-wrap:last-child .step-card {
+    margin-bottom: 0;
+  }
+
   .steps {
-    padding-bottom: 9rem;
+    padding-bottom: 6rem;
   }
 
   .consulting {
-    padding-top: 7rem;
+    padding-top: 5rem;
   }
 
   .service-grid {
