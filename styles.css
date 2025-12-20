@@ -56,16 +56,12 @@ a {
 }
 
 .hero .brand-mark .brand-green {
-  color: var(--primary-light);
+  /* match WhatsApp button green in hero */
+  color: #25d366;
 }
 
 .brand-mark .brand-black {
   color: var(--text);
-}
-
-/* Footer exception: brand must be readable on dark bg */
-.footer .brand-mark .brand-black {
-  color: var(--primary);
 }
 
 .contact-link {
@@ -1125,8 +1121,8 @@ a {
 /* Footer */
 .footer {
   padding: 4rem 0 2rem;
-  background: #111;
-  color: rgba(255, 255, 255, 0.8);
+  background: var(--bg);
+  color: var(--text-muted);
 }
 
 .footer-grid {
@@ -1145,13 +1141,13 @@ a {
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(20, 20, 20, 0.6);
 }
 
 .footer a {
   display: block;
   margin-bottom: 0.4rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text);
 }
 
 .social-links {
@@ -1171,7 +1167,7 @@ a {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   margin-top: 2rem;
   padding-top: 1.5rem;
   text-align: center;
@@ -1390,6 +1386,15 @@ a {
   .hero-locations span {
     font-size: 0.9rem;
     padding: 0.28rem 0.55rem;
+  }
+
+  /* Mobile: center specific headings */
+  .consulting .about-bubble h3 {
+    text-align: center;
+  }
+
+  .contact h2 {
+    text-align: center;
   }
 
   .scroll-hint {
