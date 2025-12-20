@@ -1334,7 +1334,7 @@ a {
 
   /* Ensure clear spacing BEFORE each next badge (prevents sticking) */
   .step-wrap + .step-wrap {
-    padding-top: 2.25rem;
+    padding-top: 4.5rem;
   }
 
   .steps {
