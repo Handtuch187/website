@@ -1349,6 +1349,15 @@ a {
 }
 
 @media (max-width: 600px) {
+  .hero-locations {
+    gap: 0.5rem;
+  }
+
+  .hero-locations span {
+    font-size: 0.9rem;
+    padding: 0.28rem 0.55rem;
+  }
+
   .scroll-hint {
     display: block;
   }
