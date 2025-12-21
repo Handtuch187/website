@@ -52,7 +52,8 @@ a {
 }
 
 .brand-mark .brand-green {
-  color: var(--primary);
+  /* Use the lighter brand green for "MPU" across the site */
+  color: var(--primary-light);
 }
 
 .hero .brand-mark .brand-green {
@@ -1449,7 +1450,7 @@ a {
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.25rem;
   }
 
   .steps {
@@ -1458,14 +1459,12 @@ a {
   }
 
   .step-wrap {
-    gap: 1rem; /* keep badge->card spacing tight like desktop */
+    gap: 1.25rem; /* keep spacing consistent within each step */
     margin-bottom: 0;
   }
 
-  /* Ensure clear spacing BEFORE each next badge (prevents sticking) */
-  .step-wrap + .step-wrap {
-    padding-top: 4.5rem;
-  }
+  /* Use grid gap for consistent spacing between steps (prevents “sticking”) */
+  .step-wrap + .step-wrap { padding-top: 0; }
 
   .consulting {
     padding-top: 5rem;
