@@ -1069,6 +1069,12 @@ a {
   margin-right: 0.5rem;
 }
 
+/* Datenschutz: use dashes instead of checkmarks */
+.datenschutz-page .checklist li::before {
+  content: "–";
+  color: var(--text);
+}
+
 .service-steps {
   padding: 4rem 0;
   background: var(--bg-alt);
