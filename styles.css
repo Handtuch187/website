@@ -1458,12 +1458,12 @@ a {
     padding-bottom: 6rem;
   }
 
-  .step-wrap {
-    gap: 1.25rem; /* keep spacing consistent within each step */
-    margin-bottom: 0;
-  }
-
-  /* Use grid gap for consistent spacing between steps (prevents “sticking”) */
+  /*
+    Mobile: make step badge + card flow as independent items:
+    Schritt 1/4 -> Karte -> Schritt 2/4 -> Karte ...
+    This guarantees identical edge-to-edge spacing via the grid gap.
+  */
+  .step-wrap { display: contents; }
   .step-wrap + .step-wrap { padding-top: 0; }
 
   .consulting {
