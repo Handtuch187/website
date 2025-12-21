@@ -1458,13 +1458,20 @@ a {
     padding-bottom: 6rem;
   }
 
-  /*
-    Mobile: make step badge + card flow as independent items:
-    Schritt 1/4 -> Karte -> Schritt 2/4 -> Karte ...
-    This guarantees identical edge-to-edge spacing via the grid gap.
-  */
-  .step-wrap { display: contents; }
-  .step-wrap + .step-wrap { padding-top: 0; }
+  /* Mobile: keep step pairs but make spacing symmetric and stable */
+  .step-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem; /* same as .steps-grid gap => equal bubble-to-bubble spacing */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ensure no “drift” from desktop transforms/parallax on mobile */
+  .step-badge,
+  .step-card {
+    transform: none;
+  }
 
   .consulting {
     padding-top: 5rem;
