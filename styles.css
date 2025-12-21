@@ -56,8 +56,8 @@ a {
 }
 
 .hero .brand-mark .brand-green {
-  /* match WhatsApp button green in hero */
-  color: #25d366;
+  /* Hero headline: keep MPU white */
+  color: #fff;
 }
 
 .brand-mark .brand-black {
