@@ -444,6 +444,11 @@ a {
   justify-content: center;
 }
 
+/* Home page: center step bubble content on all viewports (desktop + mobile) */
+.home-page .steps .panel-content {
+  text-align: center;
+}
+
 .hero-stats {
   margin-top: 2rem;
   display: flex;
@@ -1402,11 +1407,11 @@ a {
   }
 
   /* Home page: center all bubble content + contact block on mobile */
-  .home-page .steps .panel-content {
+  .home-page .services .service-card {
     text-align: center;
   }
 
-  .home-page .services .service-card {
+  .home-page .consulting .about-bubble p:not(.about-kicker) {
     text-align: center;
   }
 
